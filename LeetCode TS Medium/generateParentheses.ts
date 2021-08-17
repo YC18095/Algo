@@ -1,7 +1,7 @@
 function generateParenthesis(n: number): string[] {
 
-    let res: string[]
-    let stack: string[]
+    let res: string[] = []
+    let stack: string[] = []
     
      if(n === 1) {
         res.push("()")
