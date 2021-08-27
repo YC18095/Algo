@@ -3,12 +3,12 @@
  * @param {number} target
  * @return {number[][]}
  */
-var combinationSum = function (candidates, target) {
+var combinationSumJs = function (candidates, target) {
   let result = backTracking((arr = []), candidates, target, 0, []);
   return result;
 };
 
-function backTracking(arr, candidates, target, index, result = []) {
+function backTrackingJs(arr, candidates, target, index, result = []) {
   if (target < 0) {
     return;
   }
@@ -22,9 +22,8 @@ function backTracking(arr, candidates, target, index, result = []) {
     backTracking(arr, candidates, target - candidates[i], i, result || []);
     arr.pop();
   }
-
   return result;
 }
 
 // combinationSum([2,3,6,7],7)
-combinationSum([2], 1);
+combinationSumJs([2], 1);

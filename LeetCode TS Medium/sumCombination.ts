@@ -18,7 +18,6 @@ function backTracking(
     backTracking(arr, candidates, target - candidates[i], i, result || []);
     arr.pop();
   }
-
   return result;
 }
 
