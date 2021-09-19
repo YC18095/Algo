@@ -1,4 +1,4 @@
-function backTracking(
+function backTrackingSumCom(
   arr: number[],
   candidates: number[],
   target: number,
@@ -15,13 +15,19 @@ function backTracking(
 
   for (let i = index; i < candidates.length; i++) {
     arr.push(candidates[i]);
-    backTracking(arr, candidates, target - candidates[i], i, result || []);
+    backTrackingSumCom(
+      arr,
+      candidates,
+      target - candidates[i],
+      i,
+      result || []
+    );
     arr.pop();
   }
   return result;
 }
 
 function combinationSum(candidates: number[], target: number): number[][] {
-  let result: number[][] = backTracking([], candidates, target, 0, []);
+  let result: number[][] = backTrackingSumCom([], candidates, target, 0, []);
   return result;
 }
